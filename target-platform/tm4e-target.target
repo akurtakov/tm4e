@@ -20,8 +20,8 @@
             <unit id="junit-jupiter-api" version="0.0.0"/>
             <unit id="org.eclipse.jdt.junit5.runtime" version="0.0.0"/>
             <unit id="org.eclipse.ui.trace" version="0.0.0"/>
-            <unit id="org.hamcrest.core" version="0.0.0"/>
-            <!-- 4.28 = Eclipse 2023-06 -->
+            <unit id="org.hamcrest" version="0.0.0"/>
+            <!-- 4.29 = Eclipse 2023-09 -->
             <repository location="https://download.eclipse.org/eclipse/updates/4.29/"/>
         </location>
 	    <location includeDependencyDepth="direct" includeDependencyScopes="compile" includeSource="true" missingManifest="generate" type="Maven">
