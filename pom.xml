@@ -11,7 +11,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.minimum.version>3.9.5</maven.minimum.version>
-		<tycho-version>4.0.7</tycho-version>
+		<tycho-version>4.0.8</tycho-version>
 		<sonar.jacoco.reportPath>../target/jacoco.exec</sonar.jacoco.reportPath>
 		<tycho.scmUrl>scm:git:https://github.com/eclipse/tm4e.git</tycho.scmUrl>
 		<tycho-surefire-plugin.vmargs></tycho-surefire-plugin.vmargs>
@@ -65,7 +65,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.4.1</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<id>enforce</id>
@@ -125,7 +125,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<phase>test</phase>
@@ -138,7 +138,7 @@
 					<dependency>
 						<groupId>org.apache.maven.surefire</groupId>
 						<artifactId>surefire-junit-platform</artifactId>
-						<version>3.2.5</version>
+						<version>3.3.0</version>
 					</dependency>
 					<dependency>
 						<groupId>org.junit.jupiter</groupId>
