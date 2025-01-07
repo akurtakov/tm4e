@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <!--
 ###############################################################################
-# Copyright (c) 2015-2017 Angelo Zerr and others.
+# Copyright (c) 2015, 2025 Angelo Zerr and others.
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License v1.0
 # which accompanies this distribution, and is available at
@@ -35,6 +35,13 @@
    <extension point="org.eclipse.ui.genericeditor.characterPairMatchers">
       <characterPairMatcher
             class="org.eclipse.tm4e.languageconfiguration.internal.LanguageConfigurationCharacterPairMatcher"
+            contentType="org.eclipse.core.runtime.text" />
+   </extension>
+   
+   <!-- Folding regions based on language configuration -->
+   <extension point="org.eclipse.ui.genericeditor.foldingReconcilers">
+      <foldingReconciler
+            class="org.eclipse.tm4e.languageconfiguration.internal.LanguageConfigurationFoldingReconciler"
             contentType="org.eclipse.core.runtime.text" />
    </extension>
 
