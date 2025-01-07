@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015-2018 Angelo ZERR and others.
+ * Copyright (c) 2015, 2025 Angelo ZERR and others.
  * This program and the accompanying materials are made
  * available under the terms of the Eclipse Public License 2.0
  * which is available at https://www.eclipse.org/legal/epl-2.0/
@@ -28,6 +28,7 @@ import org.eclipse.tm4e.languageconfiguration.LanguageConfigurationPlugin;
 import org.eclipse.tm4e.languageconfiguration.internal.model.AutoClosingPair;
 import org.eclipse.tm4e.languageconfiguration.internal.model.AutoClosingPairConditional;
 import org.eclipse.tm4e.languageconfiguration.internal.model.CompleteEnterAction;
+import org.eclipse.tm4e.languageconfiguration.internal.model.FoldingRules;
 import org.eclipse.tm4e.languageconfiguration.internal.model.IndentForEnter;
 import org.eclipse.tm4e.languageconfiguration.internal.preferences.PreferenceConstants;
 import org.eclipse.tm4e.languageconfiguration.internal.preferences.PreferenceHelper;
@@ -201,6 +202,14 @@ public final class LanguageConfigurationRegistryManager extends AbstractLanguage
 	public @Nullable CommentSupport getCommentSupport(final IContentType contentType) {
 		final var definition = this.getDefinition(contentType);
 		return definition == null ? null : definition.getCommentSupport();
+	}
+	
+	public @Nullable FoldingRules getFoldingRules(final IContentType contentType) {
+		final var definition = this.getDefinition(contentType);
+		if (definition == null) return null;
+		final var langConfig = definition.getLanguageConfiguration();
+		if(langConfig == null) return null;
+		return langConfig.getFolding();
 	}
 
 	private @Nullable OnEnterSupport _getOnEnterSupport(final IContentType contentType) {
